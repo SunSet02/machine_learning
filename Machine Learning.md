@@ -48,11 +48,11 @@ Field of study that gives computers the ability to learn without being explicitl
 
 f<sub>w,b</sub>(x)/f(x)= wx + b(w:weight , b:bias，模型参数)
 
-![image-20230711174808155](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230711174808155.png)
+![image-20230711174808155](img/image-20230711174808155.png)
 
 定义成本函数：衡量一条线与训练数据的拟合程度（J（w,b））
 
-![image-20230711221845687](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230711221845687.png)
+![image-20230711221845687](img/image-20230711221845687.png)
 
 
 
@@ -66,7 +66,7 @@ f<sub>w,b</sub>(x)/f(x)= wx + b(w:weight , b:bias，模型参数)
 2. keep changing w，b to reduce  j(w,b)
 3. until we settle at or near a minimum(maybe not one result w , b)
 
-![image-20230713170040513](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230713170040513.png)
+![image-20230713170040513](img/image-20230713170040513.png)
 $$
 \begin{align*} \text{repeat}&\text{ until convergence:} \; \lbrace \newline
 \;  w &= w -  \alpha \frac{\partial J(w,b)}{\partial w} \tag{3}  \; \newline 
@@ -81,19 +81,19 @@ $$
 
 重复**同时**更新w和b的值，直到算法收敛（即达到局部最小值）
 
-![image-20230713171756926](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230713171756926.png)
+![image-20230713171756926](img/image-20230713171756926.png)
 
 
 
 体验导数（偏导的作用）当只有一个变量w时：（不管初始w选取什么，让w每次的更新都朝着成本函数减少的方向更新）
 
-![image-20230713173141068](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230713173141068.png)
+![image-20230713173141068](img/image-20230713173141068.png)
 
 
 
 学习率α的直观作用：
 
-![image-20230713173913991](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230713173913991.png)
+![image-20230713173913991](img/image-20230713173913991.png)
 
 
 
@@ -101,7 +101,7 @@ $$
 
 梯度下降当α固定时，前面几次下降速度会快一点（因为导数大），当越接近局部最优解时，下降速度会越来越慢，因为导数基本上=0了
 
-![image-20230713174544259](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230713174544259.png)
+![image-20230713174544259](img/image-20230713174544259.png)
 
 
 
@@ -115,7 +115,7 @@ $$
 
 成本函数公式结合梯度下降的综合：
 
-![image-20230713175419304](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230713175419304.png)
+![image-20230713175419304](img/image-20230713175419304.png)
 
 
 
@@ -140,7 +140,7 @@ def compute_cost(x, y, w, b):
 
 2. 计算偏导
 
-![image-20230717091641372](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230717091641372.png)
+![image-20230717091641372](img/image-20230717091641372.png)
 
 ```py
 def compute_gradient(x, y, w, b): 
@@ -243,11 +243,11 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
 
 5. 随着迭代次数的增加，成本函数的值逐渐下降
 
-![image-20230717094603424](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230717094603424.png)
+![image-20230717094603424](img/image-20230717094603424.png)
 
 6. 预测
 
-![image-20230717094728811](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230717094728811.png)
+![image-20230717094728811](img/image-20230717094728811.png)
 
 #### 2.1.2多元线性回归模型（multiple linear regression）
 
@@ -256,7 +256,7 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
 1. 是multiple linear regression而不是multivariate regression
 2. 是两个向量进行点积
 
-![image-20230717103306314](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230717103306314.png)
+![image-20230717103306314](img/image-20230717103306314.png)
 
 
 
@@ -269,7 +269,7 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
 1. 代码简洁
 2. 运算速度快
 
-![image-20230717104313070](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230717104313070.png)
+![image-20230717104313070](img/image-20230717104313070.png)
 
 
 
@@ -277,11 +277,11 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
 
 
 
-![image-20230717212111329](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230717212111329.png)
+![image-20230717212111329](img/image-20230717212111329.png)
 
 梯度下降：
 
-![image-20230717212641546](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230717212641546.png)
+![image-20230717212641546](img/image-20230717212641546.png)
 
 
 
@@ -293,25 +293,25 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
 
 
 
-![image-20230718104712875](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718104712875.png)
+![image-20230718104712875](img/image-20230718104712875.png)
 
 特征缩放方法：
 
 1. 除以最大值
 
-![image-20230718105126822](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718105126822.png)
+![image-20230718105126822](img/image-20230718105126822.png)
 
 2. 均值归一化（先计算特征的平均值，然后处理特征数据）
 
-![image-20230718105648037](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718105648037.png)
+![image-20230718105648037](img/image-20230718105648037.png)
 
 3. Z-score标准化（计算标准差西格玛和均值）
 
-![image-20230718110238063](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718110238063.png)
+![image-20230718110238063](img/image-20230718110238063.png)
 
 何时进行缩放：
 
-![image-20230718110645963](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718110645963.png)
+![image-20230718110645963](img/image-20230718110645963.png)
 
 ##### 如何判断梯度下降是否收敛
 
@@ -319,13 +319,13 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
 
 ​      随着迭代次数的增加成本函数变化趋于平缓时，此时就可以认为梯度下降趋于收敛
 
-![image-20230718162154499](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718162154499.png)
+![image-20230718162154499](img/image-20230718162154499.png)
 
 2. 自动收敛测试（设置一个epsilon，当一次迭代过后成本函数的变化值小于epsilon时，此时可以认为梯度下降趋于收敛）
 
 ​		当然epsilon的取值并不好寻找，所以更趋向于使用学习曲线去判断梯度下降是否收敛
 
-![image-20230718162419258](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718162419258.png)
+![image-20230718162419258](img/image-20230718162419258.png)
 
 
 
@@ -333,7 +333,7 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
 
 
 
-![image-20230718163339512](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718163339512.png)
+![image-20230718163339512](img/image-20230718163339512.png)
 
 
 
@@ -341,7 +341,7 @@ print(f"(w,b) found by gradient descent: ({w_final:8.4f},{b_final:8.4f})")
 
 using intuition to design new features by transforming or combining original features（即为创建一个新特征）
 
-![image-20230718165814572](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230718165814572.png)
+![image-20230718165814572](img/image-20230718165814572.png)
 
 ### 2.2 二元分类（binary Classification）
 
@@ -354,59 +354,59 @@ using intuition to design new features by transforming or combining original fea
 1. 先使用回归模型对给定的训练集进行训练，得到z = wx + b（此时若直接将训练出来的w和b用于预测，其结果无法固定在0,1两个数）
 2. 使用logistic function（相当于复合函数）将z = wx + b带入到g（z）=  1/ 1 + e ^ -z中，这样能够让预测的结果值处于0-1之间（后期可以通过决策边界将值取为0或1）
 
-![image-20230719171519002](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719171519002.png)
+![image-20230719171519002](img/image-20230719171519002.png)
 
-![image-20230719171754979](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719171754979.png)
+![image-20230719171754979](img/image-20230719171754979.png)
 
 #### 决策边界（decision boundary）
 
 决策边界是将逻辑回归模型中的预测值y（0-1范围）取一个边界值，当预测值>边界值时，可以认为分类结果为1（0），当预测值 < 边界值时，可以认为分类结果为 0（1）
 
-![image-20230719175808552](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719175808552.png)
+![image-20230719175808552](img/image-20230719175808552.png)
 
 逻辑转换：1-->2-->3-->4-->5(最后边界计算就到了回归模型里训练出来的w，b-->wx + b何时=0)
 
-1. ![image-20230719175600273](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719175600273.png)
+1. ![image-20230719175600273](img/image-20230719175600273.png)
 
 
 
 
 
-2. ![image-20230719175634369](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719175634369.png)
+2. ![image-20230719175634369](img/image-20230719175634369.png)
 
 
 
 
 
-3. ![image-20230719175723037](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719175723037.png)
+3. ![image-20230719175723037](img/image-20230719175723037.png)
 
 
 
 
 
-4. ![image-20230719175740073](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719175740073.png)
+4. ![image-20230719175740073](img/image-20230719175740073.png)
 
 
 
 
 
-5. ![image-20230719175750565](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719175750565.png)
+5. ![image-20230719175750565](img/image-20230719175750565.png)
 
 
 
 
 
-eg:![image-20230719175934413](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719175934413.png)
+eg:![image-20230719175934413](img/image-20230719175934413.png)
 
-![image-20230719175947539](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719175947539.png)
+![image-20230719175947539](img/image-20230719175947539.png)
 
-![image-20230719180000044](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230719180000044.png)
+![image-20230719180000044](img/image-20230719180000044.png)
 
 #### 成本函数：
 
 1. 平方误差成本函数的不足：（成本变化随着w、b的变化不是一个凸函数，这样会使得梯度下降运行起来出现麻烦）
 
-![image-20230720094353449](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720094353449.png)
+![image-20230720094353449](img/image-20230720094353449.png)
 
 2. 引入损失函数（L）：
 
@@ -414,17 +414,17 @@ eg:![image-20230719175934413](https://github.com/SunSet02/machine_learning/tree/
 
 而成本函数衡量的是在整个训练集上的表现
 
-![image-20230720100814991](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720100814991.png)
+![image-20230720100814991](img/image-20230720100814991.png)
 
 分析损失函数(L）：
 
-1. 当y(i) = 1 时，即训练集里的真值为1时，损失函数选用上面的表达式形式，当预测结果![image-20230720101248545](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720101248545.png)
+1. 当y(i) = 1 时，即训练集里的真值为1时，损失函数选用上面的表达式形式，当预测结果![image-20230720101248545](img/image-20230720101248545.png)
 
-的结果无限接近1时，此时损失函数无限接近于0，当预测结果![image-20230720101336372](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720101336372.png)无限接近于0（即训练集训练出来的w，b对原样本进行预测分析时得到了相反的结果)，此时损失函数无限接近于无穷大。当预测结果![image-20230720101524983](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720101524983.png)预测结果为0.1时，此时表明训练出来的结果有10%的概率认为其结果为1，此时损失函数较大。**x的预测值离y的真值越远，损失也就越大**图例如下：
+的结果无限接近1时，此时损失函数无限接近于0，当预测结果![image-20230720101336372](img/image-20230720101336372.png)无限接近于0（即训练集训练出来的w，b对原样本进行预测分析时得到了相反的结果)，此时损失函数无限接近于无穷大。当预测结果![image-20230720101524983](img/image-20230720101524983.png)预测结果为0.1时，此时表明训练出来的结果有10%的概率认为其结果为1，此时损失函数较大。**x的预测值离y的真值越远，损失也就越大**图例如下：
 
-![image-20230720101648880](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720101648880.png)
+![image-20230720101648880](img/image-20230720101648880.png)
 
-2. 当y(i) = 0，即训练集里的真值为0时，损失函数选用下面的表达式形式，当预测结果![image-20230720101248545](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720101248545.png)的结果无限接近于0（此时真值也为0)时，此时损失函数无限接近于0，当预测结果![image-20230720101248545](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720101248545.png)无限接近于1（而真值为0)，此时损失函数无穷大，当预测结果![image-20230720101248545](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720101248545.png)的预测值为0.7，此时即有70%的概率认为其预测结果为**1**，此时损失函数也较大。**x的预测值，离y的真值越远，损失也就越大**。图例如下:
+2. 当y(i) = 0，即训练集里的真值为0时，损失函数选用下面的表达式形式，当预测结果![image-20230720101248545](img/image-20230720101248545.png)的结果无限接近于0（此时真值也为0)时，此时损失函数无限接近于0，当预测结果![image-20230720101248545](img/image-20230720101248545.png)无限接近于1（而真值为0)，此时损失函数无穷大，当预测结果![image-20230720101248545](img/image-20230720101248545.png)的预测值为0.7，此时即有70%的概率认为其预测结果为**1**，此时损失函数也较大。**x的预测值，离y的真值越远，损失也就越大**。图例如下:
 
 
 
@@ -432,13 +432,13 @@ eg:![image-20230719175934413](https://github.com/SunSet02/machine_learning/tree/
 
 成本函数 = 所有样例的损失之和 / m(训练集个数)
 
-![image-20230720104446968](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720104446968.png)
+![image-20230720104446968](img/image-20230720104446968.png)
 
 
 
 损失函数的优化（将两个表达式合并成一个）
 
-![image-20230720105259402](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720105259402.png)
+![image-20230720105259402](img/image-20230720105259402.png)
 
 
 
@@ -446,7 +446,7 @@ eg:![image-20230719175934413](https://github.com/SunSet02/machine_learning/tree/
 
 
 
-![image-20230720105531688](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720105531688.png)
+![image-20230720105531688](img/image-20230720105531688.png)
 
 
 
@@ -579,11 +579,11 @@ def gradient_descent(X, y, w_in, b_in, alpha, num_iters):
 
 记得同时更新w和b
 
-![image-20230720174131403](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720174131403.png)
+![image-20230720174131403](img/image-20230720174131403.png)
 
 线性回归模型的梯度下降与二元分类的梯度下降公式的相同于不同之处：
 
-![image-20230720174447442](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230720174447442.png)
+![image-20230720174447442](img/image-20230720174447442.png)
 
 
 
@@ -599,22 +599,22 @@ over fitting ---> high variance
 
 回归示例：
 
-![image-20230721103510572](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721103510572.png)
+![image-20230721103510572](img/image-20230721103510572.png)
 
 分类示例：
 
-![image-20230721103937203](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721103937203.png)
+![image-20230721103937203](img/image-20230721103937203.png)
 
 #### 2.3.2怎样解决过拟合
 
 1. 获取更多的训练数据
 2. 使用更少的特征（eg:不要用太多的多项式特征）
 
-![image-20230721104950717](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721104950717.png)
+![image-20230721104950717](img/image-20230721104950717.png)
 
 3. 正则化（Regularization）（一种更为温和的方式去减少某些特征的影响，而不用将其彻底消除这么严厉）
 
-![image-20230721105539023](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721105539023.png)
+![image-20230721105539023](img/image-20230721105539023.png)
 
 ##### 正则化：
 
@@ -624,27 +624,27 @@ definition：为了减小某些特征的影响，而不是简简单单的通过�
 
 新成本函数 = 平方误差成本函数 + 正则化项
 
-![image-20230721165327681](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721165327681.png)
+![image-20230721165327681](img/image-20230721165327681.png)
 
 lambda：正则化系数（参数）
 
 当lambda过小：可能导致over fitting。当lambda过大：可能会导致under fit。
 
-![image-20230721165739652](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721165739652.png)
+![image-20230721165739652](img/image-20230721165739652.png)
 
 ###### 用于线性回归的正则方法
 
 梯度下降：
 
-![image-20230721170612321](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721170612321.png)
+![image-20230721170612321](img/image-20230721170612321.png)
 
 将偏导带回wj和b中，得到表达式:
 
-![image-20230721170718684](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721170718684.png)
+![image-20230721170718684](img/image-20230721170718684.png)
 
 表达式背后的意义：正则化在每次迭代所做的事情是将w乘以一个略小于1的数，这样做会稍微缩小wj的值
 
-![image-20230721171403044](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721171403044.png)
+![image-20230721171403044](img/image-20230721171403044.png)
 $$
 J(\mathbf{w},b) = \frac{1}{2m} \sum\limits_{i = 0}^{m-1} (f_{\mathbf{w},b}(\mathbf{x}^{(i)}) - y^{(i)})^2  + \frac{\lambda}{2m}  \sum_{j=0}^{n-1} w_j^2 \tag{1}
 $$
@@ -735,11 +735,11 @@ def compute_gradient_linear_reg(X, y, w, b, lambda_):
 
 成本函数:
 
-![image-20230721172228711](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721172228711.png)
+![image-20230721172228711](img/image-20230721172228711.png)
 
 梯度下降：
 
-![image-20230721172423020](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230721172423020.png)
+![image-20230721172423020](img/image-20230721172423020.png)
 
 
 $$
@@ -893,11 +893,11 @@ training：有一组标记示例X和Y的训练集，你如何为自己训练神�
 
 #### 需求预测
 
-![image-20230723100905567](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723100905567.png)
+![image-20230723100905567](img/image-20230723100905567.png)
 
 多个隐藏层示例：
 
-![image-20230723100943503](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723100943503.png)
+![image-20230723100943503](img/image-20230723100943503.png)
 
 #### 神经网络中的层（neutral network layer）
 
@@ -907,23 +907,23 @@ how a layer of neuron work?
 
 将第一个隐藏层（layer1）进行放大观察其内部实现细节，第一个隐藏层的三个neuron每个都可以看做接收vector X的输入，得到一个输出（sigmoid 函数），即每一个neuron都可以看做是一个逻辑回归单元，具体细节如下：
 
-![image-20230723100620387](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723100620387.png)
+![image-20230723100620387](img/image-20230723100620387.png)
 
 将layer2（输出层）进行放大观察其内部细节：
 
-![image-20230723101433540](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723101433540.png)
+![image-20230723101433540](img/image-20230723101433540.png)
 
-公式：![image-20230723103823351](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723103823351.png)其中l代表第layer l层，j代表第l层的第j个neuron，g代表激活函数，请注意公式中哪些是向量，哪些是标量，不要弄混淆了。
-
-
+公式：![image-20230723103823351](img/image-20230723103823351.png)其中l代表第layer l层，j代表第l层的第j个neuron，g代表激活函数，请注意公式中哪些是向量，哪些是标量，不要弄混淆了。
 
 
 
-![image-20230723103802767](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723103802767.png)
+
+
+![image-20230723103802767](img/image-20230723103802767.png)
 
 #### 前向传播
 
-![image-20230723105210037](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723105210037.png)
+![image-20230723105210037](img/image-20230723105210037.png)
 
 用代码实现推理
 
@@ -978,9 +978,9 @@ layer_1 = Dense(units=3, activation='sigmoid')
 
 numpy中的数组表示:
 
-![image-20230723170606785](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723170606785.png)
+![image-20230723170606785](img/image-20230723170606785.png)
 
-![image-20230723171139361](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723171139361.png)
+![image-20230723171139361](img/image-20230723171139361.png)
 
 ```py
 np.array([1, 2, 3])# 一维数组
@@ -992,13 +992,13 @@ np.array([[1],
 
 **在TensorFlow中惯例是用矩阵（二维数组）来存储数据的，而在之前的线性回归模型或者逻辑回归模型之中则是使用向量（一维数组）存储数据的**
 
-![image-20230723172635585](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230723172635585.png)
+![image-20230723172635585](img/image-20230723172635585.png)
 
 #### 构建一个神经网络
 
 前面所学的构建神经网络模型：
 
-![image-20230724101014219](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230724101014219.png)
+![image-20230724101014219](img/image-20230724101014219.png)
 
 TensorFlow中另一种构建神经网络模型的方法：（无需手动将将其传递到第一层，第一层经过计算获取激活值后传递给第二层）
 
@@ -1007,11 +1007,11 @@ TensorFlow中另一种构建神经网络模型的方法：（无需手动将将�
 3. 调用model.fit（x,y）
 4. model.predict(x_new)---->进行推理或预测
 
-![image-20230724102044383](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230724102044383.png)
+![image-20230724102044383](img/image-20230724102044383.png)
 
 代码底层所做的事情：（为每个神经元硬编码，较为不方便）
 
-![image-20230724103155779](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230724103155779.png)
+![image-20230724103155779](img/image-20230724103155779.png)
 
 更为通用的前向传播模型底层实现：
 
@@ -1019,7 +1019,7 @@ TensorFlow中另一种构建神经网络模型的方法：（无需手动将将�
 
    参数如下：
 
-   ![image-20230724112216452](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230724112216452.png)
+   ![image-20230724112216452](img/image-20230724112216452.png)
 
 ```py
 def dense(a_in, W, b, g):
@@ -1032,13 +1032,13 @@ def dense(a_in, W, b, g):
 	return a_out # 返回a_out
 ```
 
-![image-20230724105729681](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230724105729681.png)
+![image-20230724105729681](img/image-20230724105729681.png)
 
 #### 神经网络为什么如此高效
 
 原因：矢量化
 
-![image-20230724165500919](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230724165500919.png)
+![image-20230724165500919](img/image-20230724165500919.png)
 
 #### TensorFlow的实现
 
@@ -1048,25 +1048,25 @@ def dense(a_in, W, b, g):
 
 具体细节如下：
 
-![image-20230725172738615](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230725172738615.png)
+![image-20230725172738615](img/image-20230725172738615.png)
 
 1. model = Se....
 
-![image-20230725173000001](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230725173000001.png)
+![image-20230725173000001](img/image-20230725173000001.png)
 
 2.告诉TensorFlow loss function also define cost function
 
-![image-20230725173652146](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230725173652146.png)
+![image-20230725173652146](img/image-20230725173652146.png)
 
 3.model.fit()
 
-![image-20230725174132912](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230725174132912.png)
+![image-20230725174132912](img/image-20230725174132912.png)
 
 #### 激活函数
 
 linear activation function（此时相当于没有激活函数 g(z) = z） 、sigmoid function和ReLU function
 
-![image-20230725175215035](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230725175215035.png)
+![image-20230725175215035](img/image-20230725175215035.png)
 
 如何选择激活函数：事实证明，输出层的激活函数会有一个非常自然的选择。
 
@@ -1094,29 +1094,29 @@ linear activation function（此时相当于没有激活函数 g(z) = z） 、si
 
 全是线性激活函数，此时相当于是个回归问题：
 
-![image-20230725215624902](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230725215624902.png)
+![image-20230725215624902](img/image-20230725215624902.png)
 
-![image-20230725215459898](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230725215459898.png)
+![image-20230725215459898](img/image-20230725215459898.png)
 
 #### Softmax
 
 Softmax回归算法是逻辑回归的推广
 
-![image-20230726102235114](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726102235114.png)
+![image-20230726102235114](img/image-20230726102235114.png)
 
 Softmax回归算法的损失函数：----> 成本函数是损失函数的总和/m，在TensorFlow中成本函数被叫做SparseCategoricalCrossentropy
 
-![image-20230726102805487](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726102805487.png)
+![image-20230726102805487](img/image-20230726102805487.png)
 
 #### 神经网络中的Softmax输出
 
 注意：a1是z1、z2...z10的函数，这是softmax与其他激活函数的不同，其他激活函数只是z的函数。
 
-![image-20230726103816907](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726103816907.png)
+![image-20230726103816907](img/image-20230726103816907.png)
 
 在TensorFlow中的代码实现：（不推荐版）
 
-![image-20230726104449631](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726104449631.png)
+![image-20230726104449631](img/image-20230726104449631.png)
 
 softmax的改进实现：
 
@@ -1126,9 +1126,9 @@ softmax的改进实现：
 
 引例2：
 
-在二元分类中![image-20230726105759196](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726105759196.png)由于a是个浮点数，此时在计算成本函数的时候，传统的方法是不显示的带入a的值进入成本函数之中，此时相当于引例1中的后者例子，而改进的损失函数就是将a的值显示的带入到损失函数之中（此时相当于引例1中的前者)，这样有利于防止精度损失。![image-20230726110054706](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726110054706.png)代码实现如下：
+在二元分类中![image-20230726105759196](img/image-20230726105759196.png)由于a是个浮点数，此时在计算成本函数的时候，传统的方法是不显示的带入a的值进入成本函数之中，此时相当于引例1中的后者例子，而改进的损失函数就是将a的值显示的带入到损失函数之中（此时相当于引例1中的前者)，这样有利于防止精度损失。![image-20230726110054706](img/image-20230726110054706.png)代码实现如下：
 
-![image-20230726110117980](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726110117980.png)
+![image-20230726110117980](img/image-20230726110117980.png)
 
 优化后的代码需要注意以下：
 
@@ -1137,15 +1137,15 @@ softmax的改进实现：
 
 优化后的softmax实现：输出层激活函数选择liner，只计算z1~z10的值，成本函数在计算时，直接将式子带入，得到更为精确的计算结果
 
-![image-20230726111006324](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726111006324.png)
+![image-20230726111006324](img/image-20230726111006324.png)
 
 此时神经网络最后一层不再输出a1，a2...a10,（即为预测概率）而是输出z1，z2...z10的中间结果，因此在最后预测的时候还要进行再操作---> f_x = tf.nn.softmax(logits)
 
-![image-20230726112022448](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726112022448.png)
+![image-20230726112022448](img/image-20230726112022448.png)
 
 二元逻辑回归也是：在预测的时候必须更改代码来获取输出值，并将其映射通过逻辑函数来实际得到概率
 
-![image-20230726112609476](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726112609476.png)
+![image-20230726112609476](img/image-20230726112609476.png)
 
 ```py
 preferred_model = Sequential(
@@ -1185,11 +1185,11 @@ adam:一种比梯度下降法更快的训练神经网络算法，可以自动调
 2. 如果发现学习率α过大----> α变小
 3. adam算法为每一个w和b所设置的学习率α并不是统一的，而是为每一个参数设置了不同的学习率
 
-![image-20230726164546859](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726164546859.png)
+![image-20230726164546859](img/image-20230726164546859.png)
 
 在TensorFlow中adam算法的实现：
 
-![image-20230726165002804](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726165002804.png)
+![image-20230726165002804](img/image-20230726165002804.png)
 
 #### 其他额外的网络层类型
 
@@ -1197,17 +1197,17 @@ adam:一种比梯度下降法更快的训练神经网络算法，可以自动调
 
 卷积层（Convolutional layer）：每个神经元只看前面一层的部分输入。
 
-![image-20230726165944418](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726165944418.png)
+![image-20230726165944418](img/image-20230726165944418.png)
 
 卷积神经网络的具体例子：
 
-![image-20230726170610032](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230726170610032.png)
+![image-20230726170610032](img/image-20230726170610032.png)
 
 
 
 #### 计算图
 
-![image-20230727103223395](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230727103223395.png)
+![image-20230727103223395](img/image-20230727103223395.png)
 
 计算图的优势：
 
@@ -1224,11 +1224,11 @@ adam:一种比梯度下降法更快的训练神经网络算法，可以自动调
 
 ##### 线性回归：
 
-![image-20230731163724937](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230731163724937.png)
+![image-20230731163724937](img/image-20230731163724937.png)
 
 ##### 逻辑回归：
 
-![image-20230731164257469](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230731164257469.png)
+![image-20230731164257469](img/image-20230731164257469.png)
 
 逻辑回归中一种更为常见的定义Jtest和Jtrain的方式：
 
@@ -1236,7 +1236,7 @@ Jtest：Jtest被定义为在测试集当中被分类错误的分数（个数）
 
 Jtrain：Jtrain被定义为在训练集当中被分类错误的分数（个数）
 
-![image-20230731165335329](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230731165335329.png)
+![image-20230731165335329](img/image-20230731165335329.png)
 
 
 
@@ -1274,25 +1274,25 @@ chatGPT:
 3. 测试集：
 作用：用于评估模型的泛化性能。在训练阶段完成后，使用测试集来测试模型在未见过的新数据上的表现。测试集的目的是模拟模型在实际应用中遇到未知数据的情况，从而提供对模型泛化性能的估计。测试集的结果可以帮助我们了解模型在真实场景中的表现，并判断模型是否存在过拟合或欠拟合等问题。需要注意的是，测试集在整个训练过程中应该被严格保留，避免被用于模型选择或调优，以确保对模型泛化性能的真实评估。
 
-![image-20230731172453631](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230731172453631.png)
+![image-20230731172453631](img/image-20230731172453631.png)
 
 修改划分后的Jtrain、Jtest和Jcv：
 
-![image-20230731172634981](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230731172634981.png)
+![image-20230731172634981](img/image-20230731172634981.png)
 
 
 
 交叉训练集用于模型选择，选择出Jcv最小的一个模型：
 
-![image-20230731175335272](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230731175335272.png)
+![image-20230731175335272](img/image-20230731175335272.png)
 
-![image-20230731175500061](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230731175500061.png)
+![image-20230731175500061](img/image-20230731175500061.png)
 
 
 
 ##### bias（偏差） and variance（方差）进行诊断
 
-![image-20230805164759574](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805164759574.png)
+![image-20230805164759574](img/image-20230805164759574.png)
 
 high bias--->在训练集上表现不好
 
@@ -1302,19 +1302,19 @@ high variance--->模型泛化能力不好(即为在cv集上表现比在训练集
 
 当Jtrain is low and Jcv is high时表示这个模型具有high variance
 
-![image-20230805165938226](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805165938226.png)
+![image-20230805165938226](img/image-20230805165938226.png)
 
 ##### 正则化（lambda）对bias和variance的影响
 
-![image-20230805171108071](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805171108071.png)
+![image-20230805171108071](img/image-20230805171108071.png)
 
 选择lambda的方法（和之前选择degree的程度类似）--->总结使用众多Jcv当中的最小值去选择degree（D）和lambda
 
 当D和lambda的选择不恰当时，都会出现high bias或者high variance
 
-![image-20230805171447329](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805171447329.png)
+![image-20230805171447329](img/image-20230805171447329.png)
 
-![image-20230805172009359](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805172009359.png)
+![image-20230805172009359](img/image-20230805172009359.png)
 
 ##### judge Jcv and Jtrain is high or low
 
@@ -1322,31 +1322,31 @@ high variance--->模型泛化能力不好(即为在cv集上表现比在训练集
 
 例如下面的基准线是10.6%，这样就意味着这个模型具有high variance问题，而不是high bias问题
 
-![image-20230805173358682](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805173358682.png)
+![image-20230805173358682](img/image-20230805173358682.png)
 
 选取基准线的方法：
 
-![image-20230805173541124](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805173541124.png)
+![image-20230805173541124](img/image-20230805173541124.png)
 
 eg：查看baseline和training error的误差是否会很大判断是否有high bias 查看training error和 cv error的差别看是否有high variance
 
-![image-20230805173931231](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805173931231.png)
+![image-20230805173931231](img/image-20230805173931231.png)
 
 ##### 学习曲线
 
 随着mtrain的增加，Jcv（dev error将会逐渐变小，因为训练集增加了可以更好的对模型进行训练）、Jtrain（training error会变大，因为随着训练集的增加，对所有的数据就会更难进行拟合，所以training error会变大）、Jcv始终会大于Jtrain，因为模型是在训练集下进行训练的，所以训练出来的w和b会更偏向于Jtrain。
 
-![image-20230805214314868](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805214314868.png)
+![image-20230805214314868](img/image-20230805214314868.png)
 
 high bias的学习曲线（under fitting）--->模型选的过于简单，导致无论增加多少新数据都不会降低错误率
 
-![image-20230805215505918](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805215505918.png)
+![image-20230805215505918](img/image-20230805215505918.png)
 
 high variance的学习曲线（over fitting）
 
 模型的错误率可以随着训练集数量的增多而逐渐趋于baseline
 
-![image-20230805220149415](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230805220149415.png)
+![image-20230805220149415](img/image-20230805220149415.png)
 
  
 
@@ -1356,19 +1356,19 @@ high variance的学习曲线（over fitting）
 
 第二个圈圈解决的是high variance的问题，计算Jcv与Jtrain的大小关系，出现问题时-->more data-->重新训练
 
-![image-20230806155509907](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806155509907.png)
+![image-20230806155509907](img/image-20230806155509907.png)
 
 当神经网络中的层和每一层当中的unit增加时是否会出现high variance问题？---> 不会（只要你的正则化参数选择的合适），但可能会减慢你拟合的速度
 
-![image-20230806160003159](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806160003159.png)
+![image-20230806160003159](img/image-20230806160003159.png)
 
 TensorFlow中神经网络中正则化的方法：
 
-![image-20230806160503658](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806160503658.png)
+![image-20230806160503658](img/image-20230806160503658.png)
 
 #### 机器学习的迭代过程
 
-![image-20230806161132328](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806161132328.png)
+![image-20230806161132328](img/image-20230806161132328.png)
 
 #### 错误分析
 
@@ -1376,7 +1376,7 @@ TensorFlow中神经网络中正则化的方法：
 
 错误分析：手动查看cv里的错误示例，并试图深入了解算法出错的地方（试图对其进行分类通过相同的特征），分类好之后寻找后续的改进方法。
 
-![image-20230806164448465](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806164448465.png)
+![image-20230806164448465](img/image-20230806164448465.png)
 
 #### 添加更多的数据
 
@@ -1386,17 +1386,17 @@ TensorFlow中神经网络中正则化的方法：
 2. 在错误分析的基础上添加那些错误预测更多的方向的数据，以便模型更好的进行训练
 3. 数据增强--->图像识别，音频识别（扭曲图像、放大、缩小图像。音频重叠（添加噪音，开车声音等等））以便得到更多的数据。
 
-![image-20230806170832026](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806170832026.png)
+![image-20230806170832026](img/image-20230806170832026.png)
 
 4. 数据合成--->eg:使用电脑技术合成一些不同样式的字母进行训练
 
 在图像数据中进行平移、旋转、缩放、翻转等变换，或者在文本数据中进行同义词替换、词序交换等操作。此外，还可以利用生成对抗网络（GANs）等生成模型来合成逼真的新数据样本。
 
-![image-20230806171224349](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806171224349.png)
+![image-20230806171224349](img/image-20230806171224349.png)
 
 #### 迁移学习
 
-![image-20230806215223600](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806215223600.png)
+![image-20230806215223600](img/image-20230806215223600.png)
 
 迁移学习的步骤：
 
@@ -1407,7 +1407,7 @@ TensorFlow中神经网络中正则化的方法：
 1. only train output layer parameters
 2. train all parameters
 
-![image-20230806220302833](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230806220302833.png)
+![image-20230806220302833](img/image-20230806220302833.png)
 
 #### 机器学习项目的完整周期
 
@@ -1416,11 +1416,11 @@ TensorFlow中神经网络中正则化的方法：
 3. 训练模型
 4. deploy in production
 
-![image-20230807102215592](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230807102215592.png)
+![image-20230807102215592](img/image-20230807102215592.png)
 
 在步骤4部署中可能要考虑的问题：
 
-![image-20230807103359382](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230807103359382.png)
+![image-20230807103359382](img/image-20230807103359382.png)
 
 #### 稀有class的precision和recall
 
@@ -1434,7 +1434,7 @@ recall高：遗漏率低（患者真的有这种疾病，被诊断出来的概�
 
 具体细节如下：
 
-![image-20230807164232212](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230807164232212.png)
+![image-20230807164232212](img/image-20230807164232212.png)
 
 如何权衡precision和recall
 
@@ -1442,19 +1442,19 @@ recall高：遗漏率低（患者真的有这种疾病，被诊断出来的概�
 
 ​		当阈值降低时，则恰好相反。
 
-![image-20230807170350454](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230807170350454.png)
+![image-20230807170350454](img/image-20230807170350454.png)
 
 在多组学习算法当中如何根据precision和recall选择哪一组？
 
 使用F1 score的方式（调和平均数，更强调教小值的平均值）
 
-![image-20230807171151453](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230807171151453.png)
+![image-20230807171151453](img/image-20230807171151453.png)
 
 ### 3.2 decision trees
 
 eg：
 
-![image-20230808212312113](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230808212312113.png)
+![image-20230808212312113](img/image-20230808212312113.png)
 
 #### 构建一颗决策树的全过程
 
@@ -1466,11 +1466,11 @@ eg：
 
 所谓maximize purity的意思是指，通过选择这个特征后，能够尽最大可能得将类别划分清楚。
 
-![image-20230808214200933](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230808214200933.png)
+![image-20230808214200933](img/image-20230808214200933.png)
 
 
 
-![image-20230808215302938](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230808215302938.png)
+![image-20230808215302938](img/image-20230808215302938.png)
 
 在决策树模型中，什么时候结束分裂时有一条规则是when improvements in purity score are below a threshold这怎么理解。请用中文回答
 
@@ -1478,7 +1478,7 @@ eg：
 
 熵：衡量一组数据不纯程度的指标（H），也就是说当熵越大时，数据越不纯（越混乱）
 
-![image-20230809095956207](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809095956207.png)
+![image-20230809095956207](img/image-20230809095956207.png)
 
 #### 选择拆分信息增益
 
@@ -1488,7 +1488,7 @@ eg：
 
 选择用哪个特征进行划分的依据是：哪个特征可以最大程度的减小熵，之所以要用上一层的熵值-下一层熵值的加权平均，那是因为当熵值的减小量低于一定程度时就要停止划分，防止过拟合。
 
-![image-20230809101704256](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809101704256.png)
+![image-20230809101704256](img/image-20230809101704256.png)
 
 信息增益（information gain）的一般公式
 
@@ -1496,11 +1496,11 @@ p1 left：分类到左边的猫的数量占左边总量的比重
 
 w left：分到左边的数量占总数的比重
 
-![image-20230809102313882](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809102313882.png)
+![image-20230809102313882](img/image-20230809102313882.png)
 
 #### 对前面所学的整合
 
-![image-20230809102841582](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809102841582.png)
+![image-20230809102841582](img/image-20230809102841582.png)
 
 #### one-hot技术
 
@@ -1508,15 +1508,15 @@ w left：分到左边的数量占总数的比重
 
 注意one-hot技术不仅适用于决策树模型，当你把其他的只有两个取值的结果改成0/1取值时，此时也可以使用神经网络进行训练。即one-hot技术也适用于神经网络、线性回归、逻辑回归模型。
 
-![image-20230809104813305](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809104813305.png)
+![image-20230809104813305](img/image-20230809104813305.png)
 
 #### 如何对连续的取值特征进行构建决策树
 
 方法：考虑要拆分的不同值，计算信息增益取信息增益值最大（熵变化最大的），此时选择对应的值进行拆分即可
 
-![image-20230809155914249](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809155914249.png)
+![image-20230809155914249](img/image-20230809155914249.png)
 
-![image-20230809160133431](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809160133431.png)
+![image-20230809160133431](img/image-20230809160133431.png)
 
 #### 回归模型的决策树
 
@@ -1524,13 +1524,13 @@ w left：分到左边的数量占总数的比重
 
 eg：
 
-![image-20230809160918479](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809160918479.png)
+![image-20230809160918479](img/image-20230809160918479.png)
 
 回归模型的决策树如何进行特征分割？
 
 在决策树当中，选择的是使用熵进行特征分割，而在回归模型的决策树当中则是尝试减少每个数据子集Y的权重方差。
 
-![image-20230809161837145](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809161837145.png)
+![image-20230809161837145](img/image-20230809161837145.png)
 
 #### 使用多个决策树
 
@@ -1538,27 +1538,27 @@ eg：
 
 因为仅仅改变一个样本就有可能导致算法在根部产生不同的分裂，从而产生一颗不同的决策树，这样会使得算法不那么健壮。
 
-![image-20230809162414563](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809162414563.png)
+![image-20230809162414563](img/image-20230809162414563.png)
 
 构建出多颗决策树，然后对预测样本分别进行决策，预测结果多的为最终结果
 
-![image-20230809162722475](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809162722475.png)
+![image-20230809162722475](img/image-20230809162722475.png)
 
 #### 如何通过替换采样技术构建多颗决策树
 
 在训练集（10个）里面连续抽10次，注意每次抽的时候都要将样本放回，这样相当于构建了一个新的训练集，但数据还是原来的。
 
-![image-20230809163448339](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809163448339.png)
+![image-20230809163448339](img/image-20230809163448339.png)
 
 #### 随机森林
 
 在进行了替换采样技术生成了多个训练集后，可能会导致生成的多颗决策树长得一样，这样算法的健壮性就不好，因此引出了随机森林：
 
-![image-20230809164840973](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809164840973.png)
+![image-20230809164840973](img/image-20230809164840973.png)
 
 决策森林：在对每一个节点进行特征分割时，不再是对所有的（n个特征）进行选择信息增益最大的，而是随机从k个（k一般=根号n）中进行选择信息增益最大的。
 
-![image-20230809165038130](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809165038130.png)
+![image-20230809165038130](img/image-20230809165038130.png)
 
 #### XGBoost
 
@@ -1610,22 +1610,22 @@ XGBoost（eXtreme Gradient Boosting）是一种高性能、可扩展的机器学
 
 总之，XGBoost的核心策略是通过迭代、样本权重调整和决策树生成来逐步改进模型，特别关注之前分类错误的样本，以达到更好的预测性能。这种策略使得XGBoost在处理复杂问题时能够有效地提高准确性。
 
-![image-20230809221334231](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809221334231.png)
+![image-20230809221334231](img/image-20230809221334231.png)
 
 XGboost优势：
 
-![image-20230809221721981](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809221721981.png)
+![image-20230809221721981](img/image-20230809221721981.png)
 
 代码：
 
 1. 分类问题
 2. 回归问题
 
-![image-20230809220954287](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809220954287.png)
+![image-20230809220954287](img/image-20230809220954287.png)
 
 #### 什么时候使用决策树/神经网络
 
-![image-20230809222825763](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230809222825763.png)
+![image-20230809222825763](img/image-20230809222825763.png)
 
 ## 4. unsupervised learning
 
@@ -1654,9 +1654,9 @@ K-means algorithm的直觉执行步骤
 
 K-means algorithm detail
 
-![image-20230811165940946](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230811165940946.png)
+![image-20230811165940946](img/image-20230811165940946.png)
 
-![image-20230811173348203](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230811173348203.png)
+![image-20230811173348203](img/image-20230811173348203.png)
 
 当一个簇质心没有被分配到一个训练样本时的处理办法：
 
@@ -1667,7 +1667,7 @@ K-means algorithm detail
 
 K-means 的cost function不可能上升
 
-![image-20230811175854948](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230811175854948.png)
+![image-20230811175854948](img/image-20230811175854948.png)
 
 
 
@@ -1675,13 +1675,13 @@ K-means 的cost function不可能上升
 
 初始化K-means中可能会出现局部最优解而导致算法陷入僵局中：
 
-![image-20230811180612898](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230811180612898.png)
+![image-20230811180612898](img/image-20230811180612898.png)
 
 
 
 如何解决？--->使用多个随机初始化K
 
-![image-20230811181022115](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230811181022115.png)
+![image-20230811181022115](img/image-20230811181022115.png)
 
 ### 异常检测（anomaly detection）
 
@@ -1691,17 +1691,17 @@ K-means 的cost function不可能上升
 
 执行异常检测的最常见方法是：density estimation(密度估计)
 
-![image-20230813215848597](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230813215848597.png)
+![image-20230813215848597](img/image-20230813215848597.png)
 
 异常检测的应用：
 
-![image-20230813220522731](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230813220522731.png)
+![image-20230813220522731](img/image-20230813220522731.png)
 
 #### 高斯分布（正态分布）
 
-![image-20230813221111323](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230813221111323.png)
+![image-20230813221111323](img/image-20230813221111323.png)
 
-![image-20230813221339718](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230813221339718.png)
+![image-20230813221339718](img/image-20230813221339718.png)
 
 
 
@@ -1709,19 +1709,19 @@ K-means 的cost function不可能上升
 
 计算u和西格玛：
 
-![image-20230813221838768](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230813221838768.png)
+![image-20230813221838768](img/image-20230813221838768.png)
 
 ##### 具有多维特征的密度估计
 
-![image-20230815170501530](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230815170501530.png)
+![image-20230815170501530](img/image-20230815170501530.png)
 
 步骤：
 
-![image-20230815171303697](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230815171303697.png)
+![image-20230815171303697](img/image-20230815171303697.png)
 
 eg：
 
-![image-20230815171633214](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230815171633214.png)
+![image-20230815171633214](img/image-20230815171633214.png)
 
 #### 开发和评估异常检测系统
 
@@ -1743,11 +1743,11 @@ eg：
 
 
 
-![image-20230815185513438](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230815185513438.png)
+![image-20230815185513438](img/image-20230815185513438.png)
 
 eg：
 
-![image-20230815190527567](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230815190527567.png)
+![image-20230815190527567](img/image-20230815190527567.png)
 
 #### 异常检测与监督学习
 
@@ -1757,9 +1757,9 @@ eg：
 
 监督学习：从确定未来示例中找到和之前类似的数据
 
-![image-20230815192909499](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230815192909499.png)
+![image-20230815192909499](img/image-20230815192909499.png)
 
-![image-20230815193231344](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230815193231344.png)
+![image-20230815193231344](img/image-20230815193231344.png)
 
 #### 选择使用什么特征
 
@@ -1769,13 +1769,13 @@ eg：
 
 eg：将不太符合高斯分布的特征通过转换变成较符合的高斯分布（如果在训练集中进行了转换，请注意在cv集和test集也要做转换）
 
-![image-20230816162318735](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230816162318735.png)
+![image-20230816162318735](img/image-20230816162318735.png)
 
 尝试寻找一些新的特征以便让在原来的特征里是异常的被误分为正常的训练样本可以在新的特征样本中得到解决
 
-![image-20230816164150648](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230816164150648.png)
+![image-20230816164150648](img/image-20230816164150648.png)
 
-![image-20230816164652391](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230816164652391.png)
+![image-20230816164652391](img/image-20230816164652391.png)
 
 练习：
 
@@ -1903,43 +1903,43 @@ def select_threshold(y_val, p_val):
 
 ## 5. recommender systems 
 
-![image-20230820175657528](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230820175657528.png)
+![image-20230820175657528](img/image-20230820175657528.png)
 
 引例：查看用户未评价的电影，并尝试预测用户将会如何评价电影（这样就可以向用户推荐他们更有可能评价为五星的电影）
 
-![image-20230819204501310](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819204501310.png)
+![image-20230819204501310](img/image-20230819204501310.png)
 
 为每一部电影引入两个新特征（浪漫片or动作片），下面使用线性回归模型为用户暂时未评分的电影预测评分。
 
-![image-20230819205818590](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819205818590.png)
+![image-20230819205818590](img/image-20230819205818590.png)
 
 定义成本函数：（与线性回归模型的成本函数类似）
 
-![image-20230819210726474](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819210726474.png)
+![image-20230819210726474](img/image-20230819210726474.png)
 
 由于mj只是一个常数，因此直接将mj消除后求成本函数的最小值所得到的w与b是一样的。
 
-![image-20230819211207288](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819211207288.png)
+![image-20230819211207288](img/image-20230819211207288.png)
 
 假如电影没有额外的特征（爱情片or动作片）如何修改算法？
 
 从数据中学习或得出这些特征，假设已经知道了w和b参数的值，这样就可以通过多个用户协同过滤的方式学习到特征的值
 
-![image-20230819212449625](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819212449625.png)
+![image-20230819212449625](img/image-20230819212449625.png)
 
 计算特征的成本函数：注意正则化项与前面的不同之处
 
-![image-20230819213228865](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819213228865.png)
+![image-20230819213228865](img/image-20230819213228865.png)
 
 ### 协同过滤算法
 
-使用协同过滤算法是对上面的两个成本函数的总结，在第一个成本函数之中我们已知了特征值而不知道参数w和b，因此我们使用![image-20230819214445614](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819214445614.png)来选择w和b的值，在第二个成本函数中我们已知了参数w和b的值而不知道特征x（i)，因此我们使用![image-20230819214554528](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819214554528.png)
+使用协同过滤算法是对上面的两个成本函数的总结，在第一个成本函数之中我们已知了特征值而不知道参数w和b，因此我们使用![image-20230819214445614](img/image-20230819214445614.png)来选择w和b的值，在第二个成本函数中我们已知了参数w和b的值而不知道特征x（i)，因此我们使用![image-20230819214554528](img/image-20230819214554528.png)
 
 来选择x（i）的值，下面我们将使用协同过滤算法同时来估计w、b、x的值，由于这两个成本函数的第一项本质上都是一样的（计算所有用户的评分误差之和）只不过是两种不同的计算方式，在第一个成本函数之中，使用的是对i求和（i表示的是电影即为一行一行的计算再求和）而在第二个成本函数之中，使用的是对j求和（j表示的是用户即为一列一列的计算再求和），因此可以将这两个成本函数进行合并处理，计算成本函数，同时估计w、b、x。
 
 请注意上面的两种方法只是对已经评分的电影的误差估计的两种方式，他们本质上是一样的。
 
-![image-20230819214313198](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819214313198.png)
+![image-20230819214313198](img/image-20230819214313198.png)
 
 The collaborative filtering cost function is given by
 $$
@@ -1962,25 +1962,25 @@ $$
 
 使用梯度下降进行w、b、x的估计：（请注意此时有三个要估计的变量w、b、x）
 
-![image-20230819215554550](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819215554550.png)
+![image-20230819215554550](img/image-20230819215554550.png)
 
 ### 二进制标签
 
 此时只关心用户是否喜欢这个电影（预测是否会点赞/收藏）
 
-![image-20230819220221375](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819220221375.png)
+![image-20230819220221375](img/image-20230819220221375.png)
 
 二进制标签应用举例：
 
-![image-20230819220630144](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819220630144.png)
+![image-20230819220630144](img/image-20230819220630144.png)
 
 算法实现：（与线性回归模型到逻辑回归模型类似）
 
-![image-20230819220838328](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819220838328.png)
+![image-20230819220838328](img/image-20230819220838328.png)
 
 二元制标签成本函数：
 
-![image-20230819221628014](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230819221628014.png)
+![image-20230819221628014](img/image-20230819221628014.png)
 
 
 
@@ -1988,7 +1988,7 @@ $$
 
 ​		为何需要均值归一化，当出现一个新的用户（还未观看任何一场电影），此时使用算法对模型的参数进行选择时，由于用户还未对任何一场电影进行评分，因此成本函数的第一项就没有意义（因为所有的r（i,j）都等于0），此时函数就会尽可能让第二项也就是参数w的值越小越好，所以对于还未观看电影的人来说，此时w的值就会被算法运行变成0，而b的值也很有可能会为0，这样算法对于还未观看任何电影的用户的评分预测值=wx+b等于0，这样就会出问题。
 
-![image-20230820163501985](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230820163501985.png)
+![image-20230820163501985](img/image-20230820163501985.png)
 
 均值归一化的步骤：
 
@@ -1998,30 +1998,30 @@ $$
 4. 运行算法（最后预测的时候记得加上平均值）
 5. 对于没有看过任何一场或者看过很少电影的人来说，最后的预测结果将会是这部电影平均分
 
-![image-20230820165640612](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230820165640612.png)
+![image-20230820165640612](img/image-20230820165640612.png)
 
 ### TensorFlow的auto diff
 
 在TensorFlow中可以给出成本函数的计算公式后，根据一定的语法自动去运行梯度下降，避免手动的去计算导数（偏导数），示例如下
 
-![image-20230820170721827](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230820170721827.png)
+![image-20230820170721827](img/image-20230820170721827.png)
 
 ### 协同过滤算法在TensorFlow中的实现
 
-![image-20230820171510748](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230820171510748.png)
+![image-20230820171510748](img/image-20230820171510748.png)
 
 ### 寻找相关特征（寻找类似的电影、书籍）
 
 ​		如何实现寻找类似的电影、书籍，此时只需要计算另一些电影、书籍与当前的特征之间的距离，选择距离最小的就是类似的。
 
-![image-20230820173345287](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230820173345287.png)
+![image-20230820173345287](img/image-20230820173345287.png)
 
 ### 协同过滤算法的不足
 
 1. 冷启动问题（对新电影的评分不足问题，对新用户对电影很少评分而缺少数据问题）
 2. 无法将一些额外信息进行利用
 
-![image-20230820173910030](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230820173910030.png)
+![image-20230820173910030](img/image-20230820173910030.png)
 
 C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
 
@@ -2035,37 +2035,37 @@ C:\Program Files (x86)\Microsoft Visual Studio\Shared
 
 之前的过滤算法与基于内容的过滤算法的对比：
 
-![image-20230822094419610](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822094419610.png)
+![image-20230822094419610](img/image-20230822094419610.png)
 
 #### 基于内容过滤算法的实现步骤：
 
 1. 构建user feature和movie feature，两个向量的大小可以不一样
 
-![image-20230822095607517](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822095607517.png)
+![image-20230822095607517](img/image-20230822095607517.png)
 
 2. learn to match（之前的协同过滤算法需要参数b，而基于内容的过滤算法不一定需要b）
 
 在协同过滤算法中的w(j)就是基于内容过滤算法的V_u(j)(基于user feature计算出来的)，X(i)就是V_m(i)(基于movie feature计算出来的)，注意V_u(j)和V_m(i)的大小必须要一致，这样才能相乘相加。
 
-![image-20230822100837402](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822100837402.png)
+![image-20230822100837402](img/image-20230822100837402.png)
 
 3. 计算v_u和v_m（使用神经网络模型）
 
-![image-20230822101847931](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822101847931.png)
+![image-20230822101847931](img/image-20230822101847931.png)
 
 4. 成本函数
 
-![image-20230822102433989](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822102433989.png)
+![image-20230822102433989](img/image-20230822102433989.png)
 
 基于内容的过滤算法如何找类似item？
 
 和协同过滤算法寻找相关书籍（电影类似）只要计算v_m(k)和v_m(i)之间的距离，选择距离最小的几个即可。
 
-![image-20230822102819189](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822102819189.png)
+![image-20230822102819189](img/image-20230822102819189.png)
 
 TensorFlow中的基于内容过滤算法实现：
 
-![image-20230822165334128](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822165334128.png)
+![image-20230822165334128](img/image-20230822165334128.png)
 
 
 
@@ -2073,11 +2073,11 @@ TensorFlow中的基于内容过滤算法实现：
 
 1. retrieval
 
-![image-20230822103814911](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822103814911.png)
+![image-20230822103814911](img/image-20230822103814911.png)
 
 2. ranking
 
-![image-20230822104056005](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822104056005.png)
+![image-20230822104056005](img/image-20230822104056005.png)
 
 在ranking步骤中，如果电影在服务器中已经进行了预计算，并存储下来了，那么在这个步骤里只需要计算v_u(j)然后将retrieval中的电影与其相乘得到prediction进行预测。
 
@@ -2085,7 +2085,7 @@ TensorFlow中的基于内容过滤算法实现：
 
 如何权衡推荐数量和运行效率：
 
-![image-20230822105619586](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822105619586.png)
+![image-20230822105619586](img/image-20230822105619586.png)
 
 ```py
 这句话的意思是，为了分析和优化权衡，进行离线实验，以确定在召回更多物品时是否会导致更相关的推荐。具体来说，它关注了以下两个关键概念：
@@ -2116,11 +2116,11 @@ TensorFlow中的基于内容过滤算法实现：
 
 找到一个或多个新轴，例如z轴，这样当你在新轴上测量数据坐标的时候，依旧可以获得item的非常有用的信息
 
-![image-20230822205115113](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822205115113.png)
+![image-20230822205115113](img/image-20230822205115113.png)
 
 PCA技术将50多个特征压缩到2个
 
-![image-20230822205513530](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822205513530.png)
+![image-20230822205513530](img/image-20230822205513530.png)
 
 #### PCA 算法基本思想
 
@@ -2133,27 +2133,27 @@ PCA技术将50多个特征压缩到2个
 
 当选择多个z轴时，事实证明这几个轴最终是互相垂直的
 
-![image-20230822211446386](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822211446386.png)
+![image-20230822211446386](img/image-20230822211446386.png)
 
 PCA不是linear regression，首先PCA是无监督学习的一种，线性回归模型是对y进行预测，而PCA是将多个特征进行压缩，在压缩的过程之中尽可能的保持方差
 
-![image-20230822212211217](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822212211217.png)
+![image-20230822212211217](img/image-20230822212211217.png)
 
 #### PCA的重建
 
 给定压缩后的距离可以近似的得到压缩前的数据位置，这个过程叫做PCA的重建，具体步骤如下，其中[0.71,0.71]是z方向上的单位向量，3.55是压缩后数据在z轴上的距离。
 
-![image-20230822212816308](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822212816308.png)
+![image-20230822212816308](img/image-20230822212816308.png)
 
 #### PCA的代码实现
 
-![image-20230822213531818](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822213531818.png)
+![image-20230822213531818](img/image-20230822213531818.png)
 
-![image-20230822214023426](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822214023426.png)
+![image-20230822214023426](img/image-20230822214023426.png)
 
 
 
-![image-20230822214300468](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230822214300468.png)
+![image-20230822214300468](img/image-20230822214300468.png)
 
 ## 6. reinforcement learning
 
@@ -2175,31 +2175,31 @@ PCA不是linear regression，首先PCA是无监督学习的一种，线性回归
 
 强化学习的四件事：状态，动作，奖励，下一个状态
 
-![image-20230826171055102](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230826171055102.png)
+![image-20230826171055102](img/image-20230826171055102.png)
 
 ### 强化学习的回报
 
 折扣因子：走n步折扣因子^n
 
-![image-20230826171755946](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230826171755946.png)
+![image-20230826171755946](img/image-20230826171755946.png)
 
 eg:
 
-![image-20230826172410502](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230826172410502.png)
+![image-20230826172410502](img/image-20230826172410502.png)
 
 ### 强化学习算法如何选择动作
 
 如何选择动作--->提出一个称为策略π的函数，告诉你在每个状态下采取什么样的行动以最大化回报。
 
-![image-20230826173056622](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230826173056622.png)
+![image-20230826173056622](img/image-20230826173056622.png)
 
-![image-20230826172915973](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230826172915973.png)
+![image-20230826172915973](img/image-20230826172915973.png)
 
-![image-20230827101054562](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827101054562.png)
+![image-20230827101054562](img/image-20230827101054562.png)
 
 马尔科夫决策过程：未来仅取决于当前状态，而不取决于在达到当前状态之前可能会发生的任何事情（未来仅取决于你现在的位置，而不取决于你是如何到达的）
 
-![image-20230827101513172](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827101513172.png)
+![image-20230827101513172](img/image-20230827101513172.png)
 
 ### 状态-动作价值函数
 
@@ -2249,9 +2249,9 @@ $$
 
 举例：对于每一个状态s以及每一个状态下所能对应的行径方向Q(s,a)如下：
 
-![image-20230827102534420](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827102534420.png)
+![image-20230827102534420](img/image-20230827102534420.png)
 
-![image-20230827103612530](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827103612530.png)
+![image-20230827103612530](img/image-20230827103612530.png)
 
 The Best possible return from any state S is the largest value of 
 $$
@@ -2265,17 +2265,17 @@ $$
 
 啥是贝尔曼方程：帮助我们计算状态-动作价值函数的方程
 
-![image-20230827105559297](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827105559297.png)
+![image-20230827105559297](img/image-20230827105559297.png)
 
 eg:
 
-![image-20230827110017104](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827110017104.png)
+![image-20230827110017104](img/image-20230827110017104.png)
 
 
 
 **在强化学习中获得的回报有两部分：一部分是立即获得的奖励，另一部分是gamma从下一个状态获得的回报**
 
-![image-20230827110704211](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827110704211.png)
+![image-20230827110704211](img/image-20230827110704211.png)
 
 
 
@@ -2333,13 +2333,13 @@ eg:
 
 所谓随机强化学习模型是指，你的action有一定的概率不正确执行
 
-![image-20230827165050701](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827165050701.png)
+![image-20230827165050701](img/image-20230827165050701.png)
 
 
 
 #### 贝尔曼方程
 
-![image-20230827165241318](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230827165241318.png)
+![image-20230827165241318](img/image-20230827165241318.png)
 
 
 
@@ -2349,13 +2349,13 @@ eg:
 
 模拟月球着陆器
 
-![image-20230828214514898](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230828214514898.png)
+![image-20230828214514898](img/image-20230828214514898.png)
 
 
 
 算法实现
 
-![image-20230828111425608](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230828111425608.png)
+![image-20230828111425608](img/image-20230828111425608.png)
 
 
 
@@ -2367,13 +2367,13 @@ eg:
 
 之前的想法是把状态s和动作a作为输入，输出这个状态和动作下的Q(s,a)改进后的想法是，就输入状态s，同时计算状态s下的四种动作的Q（s，a）
 
-![image-20230828214926815](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230828214926815.png)
+![image-20230828214926815](img/image-20230828214926815.png)
 
 ##### epsilon-贪婪策略
 
 在算法还在运行的时候，此时还不知道在状态s下的哪个action可以最大化Q（s，a）此时就可以采取epsilon-贪婪策略进行选取（大部分时间选取最大化的Q（s，a）少部分时间随机选取）spsilon的值可以随着训练时间的增加逐渐减小
 
-![image-20230828220147864](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230828220147864.png)
+![image-20230828220147864](img/image-20230828220147864.png)
 
 ##### mini batch（op）
 
@@ -2383,22 +2383,22 @@ mini batch（小批量）：一个既适合强化学习的算法又适合监督�
 
 ​	当训练集的数量非常大的时候，在监督学习中，使用梯度下降更新w和b时，运行一次梯度下降需要花费大量时间，而模型训练需要运行很多次的梯度下降去更新w和b的值，这样会使得模型花费大量时间去进行参数更新，一种解决方法是将m分成更小的m'，这样每一步花费的时间就会少得多，从而使算法更加高效。
 
-![image-20230829095856338](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230829095856338.png)
+![image-20230829095856338](img/image-20230829095856338.png)
 
-![image-20230829100032461](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230829100032461.png)
+![image-20230829100032461](img/image-20230829100032461.png)
 
 mini-batch成本函数可能会出现一些偏差，但总体还是趋向于最小值：
 
-![image-20230829100239787](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230829100239787.png)
+![image-20230829100239787](img/image-20230829100239787.png)
 
 ###### 小批量在强化学习中的使用
 
-![image-20230829100549882](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230829100549882.png)
+![image-20230829100549882](img/image-20230829100549882.png)
 
 ##### soft update（op）
 
 所谓soft update即为在强化学习中使用mini-batch后如果直接将Q = Qnew可能会因为一些不是很好的小组导致Qnew不如原来的Q，这样就可以采用soft update来对Q进行更新
 
-![image-20230829102817602](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230829102817602.png)
+![image-20230829102817602](img/image-20230829102817602.png)
 
-![image-20230829104546864](https://github.com/SunSet02/machine_learning/tree/master/img/image-20230829104546864.png)
+![image-20230829104546864](img/image-20230829104546864.png)
